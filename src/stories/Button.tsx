@@ -1,47 +1,40 @@
 import React from 'react';
-import './button.css';
+
+// TODO: passar o estado de loading para o botão
 
 interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
+  variant?: "primary" | "secondary";
   label: string;
-  /**
-   * Optional click handler
-   */
+  disabled?: boolean;
   onClick?: () => void;
 }
 
-/**
- * Primary UI component for user interaction
- */
 export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
+  variant,
   label,
+  disabled,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+
+  function getVariantBackground() {
+    switch (variant) {
+      case "primary":
+        return 'bg-primary-light-active';
+      case "secondary":
+        return 'bg-primary-normal';
+      default:
+        return 'bg-primary-light-active';
+    }
+  }
+
   return (
     <button
       type="button"
-      className={'text-black'}
+      disabled={disabled}
+      className={`text-body-1 text-primary-darker border-regular border-primary-dark-active p-button rounded-md ${getVariantBackground()} disabled:bg-disabled-bg disabled:text-disabled-text disabled:border-none`}
       {...props}
     >
-      sadsad
+      {label}
     </button>
   );
 };
