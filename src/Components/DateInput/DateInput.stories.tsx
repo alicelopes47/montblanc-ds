@@ -3,11 +3,7 @@ import { DateInput } from './DateInput';
 
 const meta = {
   title: 'Components/DateInput',
-  component: DateInput,
-  parameters: {
-		layout: 'centered',
-	},
-  tags: ['autodocs'],
+  component: DateInput
 } satisfies Meta<typeof DateInput>;
 
 export default meta;
