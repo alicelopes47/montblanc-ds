@@ -34,8 +34,8 @@ module.exports = {
       'body-2': ['11px', { lineHeight: '100%' }],
     },
     borderWidth: {
-      regular: '0.3px'
-    }, 
+      regular: '0.3px',
+    },
     padding: {
       'button': '51.5px',
     },
