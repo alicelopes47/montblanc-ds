@@ -4,6 +4,9 @@ import { FormInput } from './FormInput';
 const meta = {
   title: 'Components/FormInput',
   component: FormInput,
+  parameters: {
+		layout: 'centered',
+	},
   tags: ['autodocs'],
 } satisfies Meta<typeof FormInput>;
 

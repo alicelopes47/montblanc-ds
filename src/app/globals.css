@@ -26,6 +26,10 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+select:invalid { 
+  color: #5F5F5F; 
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
