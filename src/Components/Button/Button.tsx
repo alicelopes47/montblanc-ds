@@ -1,7 +1,5 @@
 import React from 'react'
 
-// TODO: passar o estado de loading para o botão
-
 interface ButtonProps {
 	variant?: 'light' | 'dark'
 	label: string
@@ -55,7 +53,7 @@ export const Button = ({ variant, label, disabled, isLoading }: ButtonProps) => 
 		<button
 			type="button"
 			disabled={disabled}
-			className={`text-body-1 drop-shadow text-center flex items-center justify-center border-regular w-full min-h-[30px] px-button rounded-md ${getVariantStyles()} disabled:bg-bgDisabled disabled:text-disabled disabled:border-none`}
+			className={`text-body-1 font-regular drop-shadow text-center flex items-center justify-center border-regular w-full min-h-[30px] px-button rounded-md ${getVariantStyles()} disabled:bg-bgDisabled disabled:text-disabled disabled:border-none`}
 		>
 			{isLoading ? spinner(variant) : label}
 		</button>
