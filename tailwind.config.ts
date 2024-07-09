@@ -3,22 +3,24 @@ module.exports = {
 	content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', './src/**/*.{js,ts,jsx,tsx,mdx}'],
 	theme: {
 		colors: {
-      disabled: {
-        'bg': '#D6D6D6',
-        'text': '#5F5F5F',
-      },
-			primary: {
 				light: '#F9F5F0',
-				'light-hover': '#F6F0E8',
-				'light-active': '#EDE1CF',
+				'lightHover': '#F6F0E8',
+				'lightActive': '#EDE1CF',
+
 				normal: '#C59E64',
-				'normal-hover': '#B18E5A',
-				'normal-active': '#9e7e50',
+				'normalHover': '#B18E5A',
+				'normalActive': '#9e7e50',
+
 				dark: '#94774b',
-				'dark-hover': '#765f3c',
-				'dark-active': '#59472d',
-				darker: '#453723',
-			},
+				'darkHover': '#765f3c',
+				'darkActive': '#59472d',
+        
+        default: '#000000',
+        disabled: '#5F5F5F',
+        hightlight: '#453723',
+
+        white: '#FFFFFF',
+        bgDisabled: '#d9d9d9',
 		},
     fontSize: {
       'h1': ['48px', { lineHeight: '100%' }],
@@ -35,7 +37,7 @@ module.exports = {
       regular: '0.3px'
     }, 
     padding: {
-      'button': '8.5px 51.5px',
+      'button': '51.5px',
     },
     fontFamily: {
       'roboto': ['Roboto', 'sans-serif'],
